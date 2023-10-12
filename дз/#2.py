@@ -1,5 +1,5 @@
 # программа высчитывает остаток суммы y и x на m по формуле из задания
-def ost(x, y, m):
+def ost(x = int, y = int, m = int):
     return (((x % m) + (y % m)) % m)
 
 

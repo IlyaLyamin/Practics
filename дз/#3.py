@@ -1,4 +1,4 @@
-def finobachi(x):# функция записывает числа до числа x
+def finobachi(x = int):# функция записывает числа до числа x
     sp = [1, 2]
     while (sp[-1] + sp[-2]) < x:
         sp.append(sp[-1] + sp[-2])
