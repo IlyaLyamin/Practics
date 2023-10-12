@@ -1,5 +1,9 @@
-sp= [1, 2]
-x = int(input())
-while (sp[-1] + sp[-2]) < x:
-    sp.append(sp[-1] + sp[-2])
-print(sp)
+def finobachi(x):# функция записывает числа до числа x
+    sp = [1, 2]
+    while (sp[-1] + sp[-2]) < x:
+        sp.append(sp[-1] + sp[-2])
+    return(sp)
+
+if __name__ == "__main__":
+    x = int(input())
+    print(finobachi(x))
