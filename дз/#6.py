@@ -17,5 +17,5 @@ def killing(n = int):
     return x
 
 if __name__ == "__main__":
-    n = 10 # кол-во людей
+    n = 40 # кол-во людей
     print(*killing(n))
