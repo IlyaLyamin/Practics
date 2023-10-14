@@ -1,5 +1,10 @@
 """задача программы найти седловой элемент массива 
-(большим в своей строке и самым маленьким в своем столбце)""" 
+(большим в своей строке и самым маленьким в своем столбце)
+1  8 9  7 2 
+11 5 12 6 8
+9  9 15 9 9    
+3   
+5""" 
 def fount_saddle_elem(x = int, y = int, m = list):
     masive = [m[i: i + y] for i in range(0, (x * y), y)]
     for i in range(x):
@@ -9,28 +14,23 @@ def fount_saddle_elem(x = int, y = int, m = list):
             count += 1
             if not m_el:
                 print(m_el, "-1-", count)
-                m_el.append([masive[i][j], count])
+                m_el = [masive[i][j], count]
                 continue
-            if m_el[0][0] == masive[i][j]:
+            if m_el[0] < masive[i][j]:
                 print(m_el, "-2-", count)
-                m_el.append([masive[i][j], count])
+                m_el = [masive[i][j], count]
                 continue
-            if m_el[0][0] < masive[i][j]:
-                print(m_el, "-3-", count)
-                m_el = [[masive[i][j], count]]
-                continue
-        # на этот момент у нас есть кортеж с максимальными элементами строки и их индесами
-        print(m_el)
-        for l in m_el:
-            print(l)
-            A = True
-            for j in masive:
-                if l[0] != j[l[1]]:
-                    A = False
-                    break
-            if A:
-                return l[0]
+        # на этот момент у нас есть список с максимальным элементом строки и его индесом
+        print(m_el, "заходим в цикл по перебору в столбцах")
+        A = True
+        for j in masive:
+            if m_el[0] > j[m_el[1]]:
+                print(j[m_el[1]], "- сравниваемы элемент")
+                A = False
                 break
+        if A:
+            print("OK")
+            return m_el[0]
 
 
 
