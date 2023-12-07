@@ -1,4 +1,4 @@
-def resheto(x = int): # x - число для которого надо найти максимальный делитель
+def resheto(x: int): # x - число для которого надо найти максимальный делитель
     masive = [i for i in range(2, x + 1)]
     for i in range(2, (x // 2) + 1):
         p = 2

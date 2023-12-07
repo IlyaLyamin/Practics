@@ -3,8 +3,8 @@ def con(A_s = str, B_s = str):
     c = 0
     for i in range(len(min([A_s, B_s], key=len))):
         c += 1
-        if A_s[-(i + 1)] == B_s[-(i + 1)]:
-            print(c, A_s[i], B_s[i])
+        if A_s[-(i + 1)] == B_s[-(i + 1)] == "1":
+            print(c)
 
 
 if __name__ == "__main__":
